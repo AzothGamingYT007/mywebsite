@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Lord Cheats Vip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+    <div class="background"></div>
     <div class="container">
+        <img src="favicon.png" alt="Lord Cheats Vip" class="logo">
         <h1>Lord Cheats Vip</h1>
-        <form id="licenseForm">
-            <input type="text" id="licenseKey" placeholder="Enter your license key" required />
-            <button type="submit">Validate</button>
+        <p class="subtitle">Login with your license key to access premium features</p>
+        <form id="licenseForm" autocomplete="off">
+            <input type="text" id="licenseKey" placeholder="Enter your license key..." required autofocus />
+            <button type="submit">Login</button>
         </form>
         <div id="message"></div>
+        <div class="divider"><span>OR</span></div>
+        <a class="telegram-btn" href="https://t.me/yourchannel" target="_blank" rel="noopener">
+            <svg viewBox="0 0 40 40" width="22" height="22" style="margin-right: 8px; vertical-align: middle;">
+                <circle cx="20" cy="20" r="20" fill="#229ED9"/>
+                <path d="M29.37 13.16c.23-.83-.2-1.15-1.05-.84l-17.01 6.56c-.82.3-.82.71-.15.9l4.36 1.36 1.68 5.21c.2.55.36.76.7.76.36 0 .5-.17.68-.55l2.02-3.31 4.2 3.09c.77.41 1.32.2 1.51-.72l2.73-12.46zm-3.97 10.88l-3.34-2.46 6.18-5.7c.29-.26-.06-.41-.45-.15l-7.63 5.17-3.29-1.03 13.13-5.06-4.6 9.23z" fill="#fff"/>
+            </svg>
+            Join our Telegram Channel
+        </a>
     </div>
     <script>
         const KURO_PANEL_API_URL = "https://free.kuropanel.me/public/connect";
