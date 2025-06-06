@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>License Key Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your License Key</h1>
+        <form id="licenseForm">
+            <input type="text" id="licenseKey" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required />
+            <button type="submit">Validate</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script>
+        const VALID_LICENSE_KEY = "ABCD-1234-EFGH-5678"; // Demo key
+
+        document.getElementById('licenseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const key = document.getElementById('licenseKey').value.trim();
+            const message = document.getElementById('message');
+
+            // Basic format check: 4 groups of 4 chars separated by -
+            const format = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/i;
+            if (!format.test(key)) {
+                message.textContent = "Invalid license key format. Please use XXXX-XXXX-XXXX-XXXX.";
+                message.className = "error";
+                return;
+            }
+
+            if (key.toUpperCase() === VALID_LICENSE_KEY) {
+                message.textContent = "License key is valid. Thank you!";
+                message.className = "success";
+            } else {
+                message.textContent = "Invalid license key. Please try again.";
+                message.className = "error";
+            }
+        });
+    </script>
+</body>
+</html>
