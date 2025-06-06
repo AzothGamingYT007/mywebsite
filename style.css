@@ -1,13 +1,13 @@
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrollbars */
-    font-family: 'Montserrat', Arial, sans-serif;
     box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* MP4 Video Background Styles */
 #bg-video {
     position: fixed;
     top: 0;
@@ -19,15 +19,23 @@ html, body {
     object-fit: cover;
     z-index: -2;
     pointer-events: none;
-    background: #000; /* fallback background */
+    background: #000;
+    aspect-ratio: 16/9;
 }
 
-/* Overlay for readability and effect (optional, can adjust color/opacity) */
 .overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(10, 15, 30, 0.4); /* semi-transparent dark overlay */
+    background: rgba(10, 15, 30, 0.4);
     z-index: -1;
+}
+
+/* Mobile browser aspect-ratio fix */
+@media (max-aspect-ratio: 16/9), (min-aspect-ratio: 16/9) {
+    #bg-video {
+        width: 100vw;
+        height: 100vh;
+    }
 }
