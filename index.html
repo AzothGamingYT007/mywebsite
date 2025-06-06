@@ -15,9 +15,9 @@
         <div id="message"></div>
     </div>
     <script>
-        const VALID_LICENSE_KEY = "ABCD-1234-EFGH-5678"; // Demo key
+        const KURO_PANEL_API_URL = "https://free.kuropanel.me/public/connect";
 
-        document.getElementById('licenseForm').addEventListener('submit', function(e) {
+        document.getElementById('licenseForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const key = document.getElementById('licenseKey').value.trim();
             const message = document.getElementById('message');
@@ -30,11 +30,29 @@
                 return;
             }
 
-            if (key.toUpperCase() === VALID_LICENSE_KEY) {
-                message.textContent = "License key is valid. Thank you!";
-                message.className = "success";
-            } else {
-                message.textContent = "Invalid license key. Please try again.";
+            message.textContent = "Validating license key...";
+            message.className = "";
+
+            try {
+                const response = await fetch(KURO_PANEL_API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ license: key })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    message.textContent = data.message || "License key is valid. Thank you!";
+                    message.className = "success";
+                } else {
+                    message.textContent = data.message || "Invalid license key. Please try again.";
+                    message.className = "error";
+                }
+            } catch (error) {
+                message.textContent = "Error connecting to the license server. Please try again later.";
                 message.className = "error";
             }
         });
