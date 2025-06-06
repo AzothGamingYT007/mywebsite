@@ -1,21 +1,25 @@
-body, html {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrollbars */
     font-family: 'Montserrat', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 /* MP4 Video Background Styles */
 #bg-video {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     object-fit: cover;
     z-index: -2;
     pointer-events: none;
+    background: #000; /* fallback background */
 }
 
 /* Overlay for readability and effect (optional, can adjust color/opacity) */
