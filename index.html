@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoDL - Official Esports Team Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-300">
+
+    <!-- Header & Navigation -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white text-glow">
+                <i class="fas fa-crown mr-2 accent-gold"></i> GoDL
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-yellow-400 transition-colors duration-300">About</a>
+                <a href="#schedule" class="hover:text-yellow-400 transition-colors duration-300">Schedule</a>
+                <a href="#team" class="hover:text-yellow-400 transition-colors duration-300">Team</a>
+                <a href="#news" class="hover:text-yellow-400 transition-colors duration-300">News</a>
+                <a href="#contact" class="btn-primary px-4 py-2 rounded-md font-semibold">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-900">About</a>
+            <a href="#schedule" class="block py-2 px-4 text-sm hover:bg-gray-900">Schedule</a>
+            <a href="#team" class="block py-2 px-4 text-sm hover:bg-gray-900">Team</a>
+            <a href="#news" class="block py-2 px-4 text-sm hover:bg-gray-900">News</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-900">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section h-[90vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h1 class="text-5xl md:text-8xl font-black text-white uppercase tracking-wider text-glow">
+                    UNLEASH THE GODS
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    Welcome to the official home of GoDL. We don't just play the game, we define it.
+                </p>
+                <div class="mt-8">
+                    <a href="#team" class="btn-primary text-lg font-bold py-3 px-8 rounded-lg uppercase">Meet The Players</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Stats Section -->
+        <section id="stats" class="bg-black py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="card-bg p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold accent-gold" data-target="250">0</h3>
+                        <p class="text-lg mt-2 text-gray-400">Total Wins</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold accent-gold" data-target="42">0</h3>
+                        <p class="text-lg mt-2 text-gray-400">Tournaments Played</p>
+                    </div>
+                    <div class="card-bg p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold accent-gold" data-target="12">0</h3>
+                        <p class="text-lg mt-2 text-gray-400">Championships Won</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Match Section -->
+        <section id="schedule" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white uppercase">Upcoming <span class="accent-gold">Match</span></h2>
+                    <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded"></div>
+                </div>
+                <div class="card-bg max-w-4xl mx-auto rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-crown text-5xl accent-gold"></i>
+                        <span class="text-3xl font-bold text-white">GoDL</span>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">VS</p>
+                        <p class="text-lg accent-gold mt-2">June 25, 2025 - 8:00 PM</p>
+                    </div>
+                     <div class="flex items-center gap-4">
+                        <span class="text-3xl font-bold text-white">Team Rivals</span>
+                        <i class="fas fa-skull-crossbones text-5xl text-red-500"></i>
+                    </div>
+                    <a href="#" class="btn-primary px-6 py-3 rounded-lg uppercase mt-4 md:mt-0 whitespace-nowrap">Watch Live</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section id="team" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white uppercase">Meet The <span class="accent-gold">Gods</span></h2>
+                    <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Player Card 1 -->
+                    <div class="flip-card h-80">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-bg">
+                                <img src="https://placehold.co/400x400/FFD700/000000?text=Kratos" alt="Player 'Kratos'" class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/50">
+                                    <h3 class="text-xl font-bold text-white">Kratos</h3>
+                                    <p class="accent-gold font-semibold">In-Game Leader</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back card-bg">
+                                <p class="text-gray-300 text-sm">The strategic mastermind. Calm under pressure and always two steps ahead of the competition.</p>
+                                <div class="mt-4 flex justify-center space-x-4 text-xl">
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitch"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player Card 2 -->
+                    <div class="flip-card h-80">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-bg">
+                                <img src="https://placehold.co/400x400/FFB800/000000?text=Zeus" alt="Player 'Zeus'" class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/50">
+                                    <h3 class="text-xl font-bold text-white">Zeus</h3>
+                                    <p class="accent-gold font-semibold">Entry Fragger</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back card-bg">
+                                <p class="text-gray-300 text-sm">Known for his explosive aim and aggressive plays, Zeus is the tip of our spear.</p>
+                                <div class="mt-4 flex justify-center space-x-4 text-xl">
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitch"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Player Card 3 -->
+                    <div class="flip-card h-80">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-bg">
+                                <img src="https://placehold.co/400x400/FF9900/000000?text=Apollo" alt="Player 'Apollo'" class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/50">
+                                    <h3 class="text-xl font-bold text-white">Apollo</h3>
+                                    <p class="accent-gold font-semibold">AWPer</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back card-bg">
+                                <p class="text-gray-300 text-sm">With unparalleled precision, Apollo turns the tide of the game with a single shot.</p>
+                                <div class="mt-4 flex justify-center space-x-4 text-xl">
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitch"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Player Card 4 -->
+                    <div class="flip-card h-80">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front card-bg">
+                                <img src="https://placehold.co/400x400/FF7A00/000000?text=Hades" alt="Player 'Hades'" class="w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-black/50">
+                                    <h3 class="text-xl font-bold text-white">Hades</h3>
+                                    <p class="accent-gold font-semibold">Support / Lurker</p>
+                                </div>
+                            </div>
+                            <div class="flip-card-back card-bg">
+                                <p class="text-gray-300 text-sm">The unsung hero, providing crucial support and intel. Hades' game sense is second to none.</p>
+                                <div class="mt-4 flex justify-center space-x-4 text-xl">
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-twitch"></i></a>
+                                    <a href="#" class="text-gray-400 hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="py-20 bg-gray-900">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white uppercase">Latest <span class="accent-gold">News</span></h2>
+                    <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <!-- News Article 1 -->
+                    <div class="card-bg rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover flex flex-col">
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=Victory!" alt="Trophy" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <p class="text-sm accent-gold mb-2">June 15, 2025</p>
+                            <h3 class="text-xl font-bold text-white mb-2">GoDL Wins the Titan's Clash!</h3>
+                            <p class="text-gray-400 text-sm">An incredible performance from the team secures the championship title and a $100,000 prize pool.</p>
+                        </div>
+                         <div class="p-6 pt-0">
+                            <a href="#" class="font-semibold accent-gold hover:text-yellow-300">Read More &rarr;</a>
+                        </div>
+                    </div>
+                     <!-- News Article 2 -->
+                    <div class="card-bg rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover flex flex-col">
+                        <img src="https://placehold.co/600x400/f59e0b/ffffff?text=New+Player" alt="New Player" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <p class="text-sm accent-gold mb-2">June 10, 2025</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Welcoming 'Ares' to the Pantheon</h3>
+                            <p class="text-gray-400 text-sm">We are thrilled to announce the latest god to join our roster. Welcome, Ares, the God of War!</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="font-semibold accent-gold hover:text-yellow-300">Read More &rarr;</a>
+                        </div>
+                    </div>
+                     <!-- News Article 3 -->
+                    <div class="card-bg rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover flex flex-col">
+                        <img src="https://placehold.co/600x400/ef4444/ffffff?text=New+Merch" alt="Merchandise" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                           <p class="text-sm accent-gold mb-2">June 1, 2025</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Official GoDL Jerseys Are Here!</h3>
+                            <p class="text-gray-400 text-sm">Rep the gods with the official pro jersey. Available now in our online store.</p>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="#" class="font-semibold accent-gold hover:text-yellow-300">Shop Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact" class="bg-black pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+             <h2 class="text-2xl font-bold text-white mb-4">Join the <span class="accent-gold">Pantheon</span></h2>
+             <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Follow us on social media to stay up to date with our latest matches, news, and behind-the-scenes content.</p>
+             <div class="flex justify-center space-x-6 text-3xl mb-8">
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors"><i class="fab fa-twitch"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors"><i class="fab fa-discord"></i></a>
+             </div>
+             <div class="border-t border-gray-800 pt-6">
+                <p class="text-gray-500 text-sm">&copy; 2025 GoDL. All Rights Reserved.</p>
+                <p class="text-gray-600 text-xs mt-1">For business inquiries: <a href="mailto:contact@godl.gg" class="hover:text-yellow-400">contact@godl.gg</a></p>
+             </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
